@@ -1,0 +1,1 @@
+This is my second project in which I will be coding a simple rock, paper, scissors program. 
