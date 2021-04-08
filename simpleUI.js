@@ -126,15 +126,23 @@ assign that function to the "click" event
             incrementScore(winnerOfRound);
             console.log("User's score: "+usersScore);
             console.log("Computer's score: "+computersScore);
-            usersScoreOutput.textContent = usersScore;
-            computersScoreOutput.textContent = computersScore;
         //5. display result of round to console
             resultsOfRound=getRoundResults(winnerOfRound);
             resultsOfRound = resultsOfRound + " The computer chose "+computersPlay+".";
             console.log(resultsOfRound);
             console.log("\n");
         //6. display result of round to page
-            resultMessageOutput.textContent = resultsOfRound;
+            usersScoreOutput.textContent = usersScore;
+            computersScoreOutput.textContent = computersScore;
+            if(usersScore<5&&computersScore<5){
+                resultMessageOutput.textContent = resultsOfRound;
+            }else{
+                if(usersScore==5){
+                    resultMessageOutput.textContent = "Game over. YOU WIN!";
+                }else{
+                    resultMessageOutput.textContent = "Game over. You lose.";
+                }
+            }
         }
 
 
